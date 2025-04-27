@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Taskbar from '../components/taskbar';
 
 const Contact = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
   const containerStyle = {
     height: '100vh',
     background: "url('/images/bg%20(2).png') no-repeat center center fixed",
@@ -15,12 +13,13 @@ const Contact = () => {
     textAlign: 'center',
     position: 'relative',
     overflow: 'hidden',
+    fontFamily: 'Poppins, Arial, sans-serif',
   };
 
   const floatingHeaderStyle = {
     position: 'absolute',
     top: '20px',
-    left: isHovered ? '100px' : '20px',
+    left: '20px',
     display: 'flex',
     alignItems: 'center',
     zIndex: 2000,
@@ -28,7 +27,6 @@ const Contact = () => {
     padding: '6px 12px',
     borderRadius: '20px',
     boxShadow: '0 0 6px rgba(255, 255, 255, 0.2)',
-    transition: 'left 0.3s ease',
   };
 
   const imageStyle = {
@@ -88,14 +86,18 @@ const Contact = () => {
         <p style={contactInfoStyle}>
           Email: <a href="mailto:julianlledo7@gmail.com" style={linkStyle}>julianlledo7@gmail.com</a>
         </p>
-        <p style={contactInfoStyle}>Phone: +63 947 694 2275</p>
+        <p style={contactInfoStyle}>
+          Phone: +63 947 694 2275
+        </p>
         <p style={contactInfoStyle}>
           LinkedIn: <a href="https://linkedin.com/in/julianlledo" target="_blank" rel="noopener noreferrer" style={linkStyle}>linkedin.com/in/julianlledo</a>
         </p>
         <p style={contactInfoStyle}>
           GitHub: <a href="https://github.com/puthato" target="_blank" rel="noopener noreferrer" style={linkStyle}>github.com/puthato</a>
         </p>
-        <p style={contactInfoStyle}>Address: Dagupan City, Philippines</p>
+        <p style={contactInfoStyle}>
+          Address: Dagupan City, Philippines
+        </p>
       </div>
     </div>
   );
